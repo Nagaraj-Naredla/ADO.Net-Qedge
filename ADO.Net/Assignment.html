@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Employee Management System</h2>
+    <table id="empTable">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+        </tr>
+    </table>
+    <br>
+    <form id="empForm">
+        <label for="empId">Enter EmpId:</label>
+        <input type="text" id="empId" name="empId"><br><br>
+        <label for="empName">Enter EmpName:</label>
+        <input type="text" id="empName" name="empName"><br><br>
+        <label for="empSalary">Enter EmpSalary:</label>
+        <input type="text" id="empSalary" name="empSalary"><br><br>
+        <button type="button" onclick="addEmployee()">Add Employee</button>
+    </form>
+
+    <script>
+        var Emps = [
+            { "id": 007, "name": "Naga", "Salary": 1234 }
+        ];
+
+        function displayEmployees() {
+            var table = document.getElementById("empTable");
+           
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+
+            Emps.forEach(function (emp) {
+                var row = table.insertRow();
+                var idCell = row.insertCell(0);
+                var nameCell = row.insertCell(1);
+                var salaryCell = row.insertCell(2);
+
+                idCell.innerHTML = emp.id;
+                nameCell.innerHTML = emp.name;
+                salaryCell.innerHTML = emp.Salary;
+            });
+        }
+
+        function addEmployee() {
+            var empId = document.getElementById("empId").value;
+            var empName = document.getElementById("empName").value;
+            var empSalary = document.getElementById("empSalary").value;
+
+           
+            var newEmp = { "id": parseInt(empId), "name": empName, "Salary": parseInt(empSalary) };
+            
+            Emps.push(newEmp);
+           
+            displayEmployees();
+            
+            document.getElementById("empId").value = "";
+            document.getElementById("empName").value = "";
+            document.getElementById("empSalary").value = "";
+        }
+
+        displayEmployees();
+    </script>
+</body>
+</html>

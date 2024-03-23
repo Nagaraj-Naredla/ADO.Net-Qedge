@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormTags</title>
+</head>
+<body>
+    <h1 align="center">Example with Form Tags</h1>
+    <hr>
+   <!-- <form action="/Basic.html" >
+    <label >Enter firstname:</label>
+    <input type="text">
+    <br>
+    <label for="html">Enter Lastname:</label>
+    <input type="text">
+   </form>
+     -->
+     <form action="/Basic.html" method="get">
+     <table align="center" border="9">
+        <tr>
+            <td><label for="Fname">Enter Firstname: </label></td>
+            <td><input type="text" placeholder="Firstname" required id="Fname"/></td>
+        </tr>
+        <tr>
+            <td><label for="Sname">Enter Secondname: </label></td>
+            <td><input type="text" required id="Sname"/></td>
+        </tr>
+        <tr>
+            <td><label for="email">Enter Email: </label></td>
+            <td><input type="email" required id="email"/></td>
+        </tr>
+        <tr>
+            <td><label for="password">Enter Password: </label></td>
+            <td><input type="password" minlength="6" maxlength="15"  required id="password"/></td>
+        </tr>
+        <tr>
+            <td><label >Select Courses: </label></td>
+            <td>
+            <input type="checkbox" id="C#.Net">   <label for="C#.Net">C#.Net</label>
+            <input type="checkbox" id="SQL">      <label for="SQL">SQL</label>
+            <br>
+            <input type="checkbox" id="ADO.Net">  <label for="ADO.Net">ADO.Net</label>
+            <input type="checkbox" id="ASP.Net">  <label for="ASP.Net">ASP.Net</label>
+            </td>
+           
+        </tr>
+        <tr>
+            <td><label >Enter Gender: </label></td>
+            <td>
+                <input type="radio" name="gender" id="male"><label for="male">Male</label>
+                <input type="radio" name="gender" id="Female"><label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="City">Select City</label></td>
+            <td>
+                <select  id="City" required>
+                    <option value="HYD">Hyderabad</option>
+                    <option value="PDPL">Peddapally</option>
+                    <option value="KRMR">Karimnagar</option>
+                    <option value="KKR">Kolkata</option>
+                    <option value="PJ">Punjab</option>
+                    <option value="NKD">Narayankhed</option>
+
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="dob">Select DOB </label></td>
+            <td>
+                <input type="date" id="dob"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="Age">Select Age</label></td>
+            <td>
+                <input type="number" name="Age" max="55" min="15" id="Age"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="College">Select College Name:</label></td>
+                    <td><input list="Colleges-Name" id="Colleges" name="Colleges" />
+
+                        <datalist id="Colleges-Name">
+                            <option value="St.Martins Engg College"></option>
+                             <option value="CMR"></option>
+                             <option value="BITS"></option>
+                             <option value="GPT NKD"></option>
+                            <option value="JNTUH"></option>
+                        </datalist>
+                    </td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Register"/>
+                </td>
+                <td>
+                <input type="reset" value="Reset"/>
+            </td>
+        </tr>
+        
+     </table>
+     <input align="center" type="submit" value="Submit" />
+     </form>
+     <audio   controls src="/Images/hanumansong.mp3" type="audio/mp3"></audio>
+</body>
+</html>
